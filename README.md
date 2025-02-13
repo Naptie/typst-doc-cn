@@ -2,7 +2,7 @@
 
 社区驱动的非官方 Typst 中文文档.
 
-https://typst-doc-cn.github.io/docs/
+https://typst.dev/docs/
 
 GitHub Repo：https://github.com/typst-doc-cn/typst-doc-cn.github.io
 
@@ -34,7 +34,7 @@ Typst 的文档生成是与 Typst 源码紧耦合的, 具体体现在:
 1. Typst 开发者使用 Rust 写了一个 `docs` 模块, 文档生成的大部分工作都在这里进行;
 2. Typst 的文档是使用一种 Markdown 的方言以及 Yaml 文件生成的, `docs/src` 路径下的文件;
 3. `docs` 模块里的函数被执行后, 会动态地生成示例图片, 就像你们示例代码对应的右边的示例图片, 均为编译时生成的;
-4. 参考部分对应的大部分页面, 例如 [`lorem`](https://typst-doc-cn.github.io/docs/reference/text/lorem/) 函数, 对应的 Markdown 部分是写在 `lorem` 函数对应的 Rust 代码文件的注释里的, 有点像 `docstring`;
+4. 参考部分对应的大部分页面, 例如 [`lorem`](https://typst.dev/docs/reference/text/lorem/) 函数, 对应的 Markdown 部分是写在 `lorem` 函数对应的 Rust 代码文件的注释里的, 有点像 `docstring`;
 5. Typst Repo 里面只有 `docs` 模块的代码, 没有对应的文档网页生成的代码, 那部分还没有开源;
 
 因此我做了以下事情以生成这个 Typst 中文文档网页:
