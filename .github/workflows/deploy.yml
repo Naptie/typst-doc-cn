@@ -6,12 +6,13 @@ on:
   push:
     branches:
       - main
-permissions:
-  contents: write
 jobs:
   build-and-deploy:
-    name: build-and-deploy
+    name: Build and deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@1.79.0
@@ -23,9 +24,12 @@ jobs:
       - run: python3 -m pip install jinja2 PyYAML
       - run: cargo test --package typst-docs --lib -- tests::test_docs --exact --nocapture
       - run: python3 ./gen.py
-      # deploy ./dist to https://github.com/typst-doc-cn/typst-doc-cn.github.io
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      # deploy ./dist to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@1
         with:
-          folder: dist # The folder the action should deploy.
-          
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: typst-doc-cn
+          directory: "./dist"
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
