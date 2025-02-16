@@ -5,7 +5,7 @@ name: Deploy Documentation
 on:
   push:
     branches:
-      - main
+      - vercel
 jobs:
   deploy-vercel:
     runs-on: ubuntu-latest
