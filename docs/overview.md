@@ -7,11 +7,11 @@ description: |
 
 ---
 
-**请阅读 [小蓝书](https://tutorial.typst.dev/) 和 [Typst 中文社区导航 FAQ](https://guide.typst.dev/)。**
+**请阅读 [小蓝书](https://typst.dev/tutorial/) 和 [Typst 中文社区导航 FAQ](https://typst.dev/guide/)。**
 
-**请阅读 [小蓝书](https://tutorial.typst.dev/) 和 [Typst 中文社区导航 FAQ](https://guide.typst.dev/)。**
+**请阅读 [小蓝书](https://typst.dev/tutorial/) 和 [Typst 中文社区导航 FAQ](https://typst.dev/guide/)。**
 
-**请阅读 [小蓝书](https://tutorial.typst.dev/) 和 [Typst 中文社区导航 FAQ](https://guide.typst.dev/)。**
+**请阅读 [小蓝书](https://typst.dev/tutorial/) 和 [Typst 中文社区导航 FAQ](https://typst.dev/guide/)。**
 
 ---
 

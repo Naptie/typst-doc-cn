@@ -35,11 +35,11 @@ Typst 是可用于出版的可编程标记语言，拥有变量、函数与包�
 
 ---
 
-**请阅读 [小蓝书](https://tutorial.typst.dev/) 和 [Typst 中文社区导航 FAQ](https://guide.typst.dev/)。**
+**请阅读 [小蓝书](https://typst.dev/tutorial/) 和 [Typst 中文社区导航 FAQ](https://typst.dev/guide/)。**
 
-**请阅读 [小蓝书](https://tutorial.typst.dev/) 和 [Typst 中文社区导航 FAQ](https://guide.typst.dev/)。**
+**请阅读 [小蓝书](https://typst.dev/tutorial/) 和 [Typst 中文社区导航 FAQ](https://typst.dev/guide/)。**
 
-**请阅读 [小蓝书](https://tutorial.typst.dev/) 和 [Typst 中文社区导航 FAQ](https://guide.typst.dev/)。**
+**请阅读 [小蓝书](https://typst.dev/tutorial/) 和 [Typst 中文社区导航 FAQ](https://typst.dev/guide/)。**
 
 ---
 

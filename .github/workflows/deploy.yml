@@ -7,11 +7,8 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  deploy-vercel:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
     steps:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@1.79.0
@@ -23,15 +20,6 @@ jobs:
       - run: python3 -m pip install jinja2 PyYAML
       - run: cargo test --package typst-docs --lib -- tests::test_docs --exact --nocapture
       - run: python3 ./gen.py
-      # deploy ./dist to Cloudflare Pages
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: typst-doc-cn
-          directory: "./dist"
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
