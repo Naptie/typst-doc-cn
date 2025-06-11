@@ -32,11 +32,3 @@ jobs:
           projectName: typst-doc-cn
           directory: "./dist"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy to Vercel
-        env:
-          VERCEL_JSON: ${{ secrets.VERCEL_JSON }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          mkdir -p .vercel
-          echo $VERCEL_JSON > .vercel/project.json
-          npx vercel --prod --yes --token $VERCEL_TOKEN
